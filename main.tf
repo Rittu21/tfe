@@ -17,3 +17,34 @@ resource "azurerm_resource_group" "example" {
       jiraproject = "jkl"
   }
 }
+
+resource "azurerm_virtual_network" "networking" {
+  resource_group_name = "test-rg"
+  location            = "EastUS"
+  name                = "testing-vnet"
+  address_space       = "10.0.0.0/16"
+  tags    = {
+      product = "def"
+      owner = "ghi"
+      jiraproject = "jkl"
+  }
+}
+
+resource "azurerm_subnet" "networking" {
+  resource_group_name  = "test-rg"
+  virtual_network_name = "testing-vnet"
+  name                 = "testing-subnet"
+  address_prefixes     = "10.0.1.0/24"
+}
+
+resource "azurerm_network_security_group" "networking" {
+  resource_group_name = "test-rg"
+  location            = "EastUS"
+  name                = "test-nsg"
+  tags    = {
+      component = "abc"
+      product = "def"
+      owner = "ghi"
+      jiraproject = "jkl"
+  }
+}
