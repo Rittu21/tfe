@@ -22,7 +22,7 @@ resource "azurerm_virtual_network" "networking" {
   resource_group_name = "test-rg"
   location            = "EastUS"
   name                = "testing-vnet"
-  address_space       = "10.0.0.0/16"
+  address_space       = ["10.0.0.0/16"]
   tags    = {
       product = "def"
       owner = "ghi"
