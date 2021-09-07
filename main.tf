@@ -43,8 +43,10 @@ resource "azurerm_network_security_group" "networking" {
   location            = "EastUS"
   name                = "test-nsg"
   tags    = {
+      component = "abc"
       product = "def"
       owner = "ghi"
       jiraproject = "jkl"
+      environment = "development"
   }
 }
