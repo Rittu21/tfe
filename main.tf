@@ -24,6 +24,7 @@ resource "azurerm_virtual_network" "networking" {
   name                = "testing-vnet"
   address_space       = ["10.0.0.0/16"]
   tags    = {
+      component = "abc"
       product = "def"
       owner = "ghi"
       jiraproject = "jkl"
