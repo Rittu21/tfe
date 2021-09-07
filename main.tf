@@ -34,7 +34,7 @@ resource "azurerm_subnet" "networking" {
   resource_group_name  = "test-rg"
   virtual_network_name = "testing-vnet"
   name                 = "testing-subnet"
-  address_prefixes     = "10.0.1.0/24"
+  address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_network_security_group" "networking" {
