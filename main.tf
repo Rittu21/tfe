@@ -11,7 +11,6 @@ resource "azurerm_resource_group" "example" {
   name     = "test-rg"
   location = "EastUS"
   tags    = {
-      component = "abc"
       product = "def"
       owner = "ghi"
       jiraproject = "jkl"
