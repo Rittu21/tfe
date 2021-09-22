@@ -15,6 +15,8 @@ resource "azurerm_resource_group" "example" {
       product = "def"
       owner = "ghi"
       jiraproject = "jkl"
+      finops-owner = "mno"
+      environment = "dev"
   }
 }
 
@@ -52,5 +54,6 @@ resource "azurerm_network_security_group" "networking" {
       owner = "ghi"
       jiraproject = "jkl"
       environment = "development"
+      finops-owner = "mno"
   }
 }
