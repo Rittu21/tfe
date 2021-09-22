@@ -68,4 +68,12 @@ resource "azurerm_network_interface" "example" {
     subnet_id                     = azurerm_subnet.networking.id
     private_ip_address_allocation = "Dynamic"
   }
+   tags    = {
+      component = "abc"
+      product = "def"
+      owner = "ghi"
+      jiraproject = "jkl"
+      finops-owner = "mno"
+      environment = "dev"
+  }
 }
