@@ -93,7 +93,7 @@ resource "azurerm_windows_virtual_machine" "example" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
-  source_image_id = "/subscriptions/722985c7-a1b4-4761-957f-39cd8869a2de/resourceGroups/pqr/providers/Microsoft.Compute/galleries/abc"
+  source_image_id = "/subscriptions/722985c7-a1b4-4761-957f-39cd8869a2de/resourceGroups/pqr/providers/Microsoft.Compute/galleries/falcon_shared_image_gallery_dev/images/abc"
   
    tags    = {
       component = "abc"
