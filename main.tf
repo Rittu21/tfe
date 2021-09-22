@@ -100,4 +100,12 @@ resource "azurerm_windows_virtual_machine" "example" {
     sku       = "2016-Datacenter"
     version   = "latest"
   }
+   tags    = {
+      component = "abc"
+      product = "def"
+      owner = "ghi"
+      jiraproject = "jkl"
+      finops-owner = "mno"
+      environment = "dev"
+  }
 }
