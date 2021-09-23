@@ -123,4 +123,5 @@ resource "azurerm_managed_disk" "example" {
   encryption_settings = {
     enabled = true
     disk_encryption_key = "" 
+  }
 }
