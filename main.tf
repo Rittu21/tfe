@@ -93,7 +93,7 @@ resource "azurerm_windows_virtual_machine" "example" {
     caching              = "ReadWrite"
     storage_account_type = "Standard_LRS"
   }
-  source_image_id = "/subscriptions/1889df62-3456-4688-b0ee-070266088e22/resourceGroups/pqr/providers/Microsoft.Compute/galleries/falcon_shared_image_gallery_dev/images/abc"
+  source_image_id = "/subscriptions/722985c7-a1b4-4761-957f-39cd8869a2de/resourceGroups/pqr/providers/Microsoft.Compute/galleries/falcon_shared_image_gallery_dev/images/abc"
   
    tags    = {
       component = "abc"
@@ -119,5 +119,8 @@ resource "azurerm_managed_disk" "example" {
       jiraproject = "jkl"
       finops-owner = "mno"
       environment = "dev"
+  }
+  encryption-settings = {
+    enabled = true
   }
 }
