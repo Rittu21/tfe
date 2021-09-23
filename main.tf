@@ -120,8 +120,4 @@ resource "azurerm_managed_disk" "example" {
       finops-owner = "mno"
       environment = "dev"
   }
-  encryption_settings = {
-    enabled = true
-    disk_encryption_key = "" 
-  }
 }
