@@ -104,3 +104,23 @@ resource "azurerm_windows_virtual_machine" "example" {
       environment = "dev"
   }
 }
+resource "azurerm_managed_disk" "example" {
+  name                 = "test-disk"
+  location             = "EastUS"
+  resource_group_name  = "test-rg"
+  storage_account_type = "Standard_LRS"
+  create_option        = "Empty"
+  disk_size_gb         = "1"
+
+  tags = {
+      component = "abc"
+      product = "def"
+      owner = "ghi"
+      jiraproject = "jkl"
+      finops-owner = "mno"
+      environment = "dev"
+  }
+  encryption_settings = {
+    enabled = true
+    disk_encryption_key = "" 
+}
